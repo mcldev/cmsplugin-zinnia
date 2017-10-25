@@ -10,8 +10,9 @@ class ZinniaToolbar(CMSToolbar):
 
     def populate(self):
         user = self.request.user
+        toolbar_title = getattr(settings, 'CMSPLUGIN_ZINNIA_APP_MENU_TITLE', 'Zinnia')
         zinnia_menu = self.toolbar.get_or_create_menu(
-            'zinnia-menu', _('Zinnia'))
+            'zinnia-menu', _(toolbar_title))
 
         url = reverse('admin:zinnia_entry_add')
         zinnia_menu.add_sideframe_item(
