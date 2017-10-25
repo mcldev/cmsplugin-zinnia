@@ -1,6 +1,7 @@
 """Toolbar extensions for CMS"""
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from cms.toolbar_base import CMSToolbar
 from cms.toolbar_pool import toolbar_pool
